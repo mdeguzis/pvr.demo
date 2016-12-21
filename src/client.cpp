@@ -150,7 +150,7 @@ void OnPowerSavingDeactivated()
 {
 }
 
-PVR_ERROR GetAddonCapabilities(PVR_ADDON_CAPABILITIES* pCapabilities)
+void GetCapabilities(PVR_ADDON_CAPABILITIES* pCapabilities)
 {
   pCapabilities->bSupportsEPG             = true;
   pCapabilities->bSupportsTV              = true;
@@ -159,8 +159,6 @@ PVR_ERROR GetAddonCapabilities(PVR_ADDON_CAPABILITIES* pCapabilities)
   pCapabilities->bSupportsRecordings      = true;
   pCapabilities->bSupportsRecordingsUndelete = true;
   pCapabilities->bSupportsTimers          = true;
-
-  return PVR_ERROR_NO_ERROR;
 }
 
 const char *GetBackendName(void)
